@@ -28,7 +28,7 @@ def makeRecipe_npload(x, y, struc, dy=None):
     niPDF.profile.setObservedProfile(x, y, dy)
 
     # Load the data and set the r-range over which we'll fit
-    niPDF.setCalculationRange(xmin=1.5, xmax=30)
+    niPDF.setCalculationRange(xmin=1.5, xmax=30, dx=0.01)
 
     # Add the structure from our cif file to the contribution
     #niStructure = loadStructure(structureFile)
@@ -89,7 +89,7 @@ def makeRecipe_loaddata(obs_fn, struc):
     niPDF.loadData(obs_fn)
 
     # Load the data and set the r-range over which we'll fit
-    niPDF.setCalculationRange(xmin=1.5, xmax=30)
+    niPDF.setCalculationRange(xmin=1.5, xmax=30, dx=0.01)
 
     # Add the structure from our cif file to the contribution
     #niStructure = loadStructure(structureFile)
